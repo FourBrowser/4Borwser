@@ -23,6 +23,7 @@ sudo apt-get install -y build-essential cmake rustc cargo nodejs npm libglfw3-de
 
 ### Initial Setup
 
+#### macOS/Linux
 ```bash
 # Clone repository
 git clone https://github.com/FourBrowser/4Browser.git
@@ -45,8 +46,36 @@ cargo build
 npm run dev
 ```
 
+#### Windows (using build.bat)
+```bash
+# Clone repository
+git clone https://github.com/FourBrowser/4Browser.git
+cd 4Browser
+
+# Install dependencies
+build.bat install
+
+# Build everything
+build.bat build
+
+# Run the browser
+build.bat dev
+```
+
+Or use individual commands:
+```bash
+build.bat help       # Show all available commands
+build.bat build      # Build C++ and Rust
+build.bat ui         # Start UI dev server
+build.bat test       # Run tests
+build.bat lint       # Lint code
+build.bat format     # Format code
+build.bat clean      # Clean build artifacts
+```
+
 ### Project Commands
 
+**macOS/Linux (using make):**
 ```bash
 # Start development
 npm run dev          # Builds and runs browser
@@ -63,6 +92,29 @@ npm run lint        # Runs ESLint
 # Testing
 npm test            # Runs all tests
 cargo test          # Runs Rust tests
+```
+
+**Windows (using build.bat):**
+```bash
+# Start development
+build.bat dev        # Builds and runs browser
+
+# Build only
+build.bat build      # Builds C++ and Rust
+
+# Run UI dev server
+build.bat ui         # Starts Vite dev server on :3000
+
+# Linting
+build.bat lint       # Runs ESLint and Clippy
+
+# Testing
+build.bat test       # Runs all tests
+
+# Other commands
+build.bat clean      # Remove build artifacts
+build.bat format     # Format code
+build.bat help       # Show all commands
 ```
 
 ### File Organization
