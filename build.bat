@@ -42,7 +42,13 @@ goto end
 echo Building C++ components...
 if not exist build mkdir build
 cd build
-cmake .. -G "Visual Studio 17 2022"
+if exist "C:\vcpkg\scripts\buildsystems\vcpkg.cmake" (
+    echo Using vcpkg toolchain...
+    cmake .. -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-windows
+) else (
+    echo Building without vcpkg (dependencies must be installed manually)...
+    cmake .. -G "Visual Studio 17 2022"
+)
 cmake --build . --config Release
 cd ..
 echo Building Rust components...

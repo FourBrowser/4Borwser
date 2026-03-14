@@ -1,5 +1,5 @@
 [package]
-name = "4browser-engine"
+name = "fourbrowser-engine"
 version = "1.0.0"
 edition = "2021"
 

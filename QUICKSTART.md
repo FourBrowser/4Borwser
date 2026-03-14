@@ -20,6 +20,13 @@ sudo apt-get install -y build-essential cmake rustc cargo nodejs npm libglfw3-de
 2. Install CMake from cmake.org
 3. Install Rust from rustup.rs
 4. Install Node.js from nodejs.org
+5. **(Recommended) Install vcpkg for dependencies:**
+   ```bash
+   git clone https://github.com/Microsoft/vcpkg.git C:\vcpkg
+   cd C:\vcpkg
+   .\bootstrap-vcpkg.bat
+   .\vcpkg install glfw3:x64-windows openssl:x64-windows zlib:x64-windows
+   ```
 
 ### Initial Setup
 
@@ -55,14 +62,18 @@ cd 4Browser
 # Install dependencies
 build.bat install
 
-# Build everything
+# Build everything (will auto-detect vcpkg if installed)
 build.bat build
 
 # Run the browser
 build.bat dev
 ```
 
-Or use individual commands:
+**Windows Build Notes:**
+- If you installed **vcpkg**, build.bat will auto-detect and use it ✅
+- If vcpkg is not found, you'll need to install GLFW3, OpenSSL, and zlib manually
+- The build is optional for missing libraries—you can still build Rust and Node components
+- To install vcpkg, see system requirements above
 ```bash
 build.bat help       # Show all available commands
 build.bat build      # Build C++ and Rust
