@@ -1,0 +1,16 @@
+[package]
+name = "4browser-engine"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }
+webrender = "0.63"
+webgpu = "0.15"
+glam = "0.27"
+log = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[lib]
+crate-type = ["cdylib"]

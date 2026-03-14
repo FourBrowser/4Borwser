@@ -1,0 +1,48 @@
+// Default preferences file for 4Browser
+// Similar to Chrome's Preferences file structure
+
+{
+  "profile": {
+    "name": "Default",
+    "avatar_icon": "chrome://theme/IDR_PROFILE_AVATAR_0",
+    "local_profile_id": 0
+  },
+
+  "bookmark_bar": {
+    "show_on_all_tabs": true
+  },
+
+  "browser": {
+    "check_default_browser": false,
+    "window_placement": {
+      "bottom": 1080,
+      "left": 0,
+      "maximized": false,
+      "right": 1920,
+      "top": 0,
+      "work_area_bottom": 1080,
+      "work_area_left": 0,
+      "work_area_right": 1920,
+      "work_area_top": 0
+    }
+  },
+
+  "homepage": "about:home",
+  "homepage_is_custom": false,
+
+  "search": {
+    "suggest_enabled": true
+  },
+
+  "safebrowsing": {
+    "enabled": true
+  },
+
+  "credentials_enable_autosignin": false,
+  "credentials_enable_service": true,
+
+  "cookies_and_site_data": {
+    "local_storage_access_enabled": true,
+    "cookies_enabled": true
+  }
+}

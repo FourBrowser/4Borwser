@@ -1,0 +1,28 @@
+[workspace]
+members = [
+    "src/engine/rust",
+    "src/renderer/rust"
+]
+resolver = "2"
+
+[package]
+name = "4browser"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }
+chromium = "0.1"
+webrender = "0.63"
+webgpu = "0.15"
+glutin = "0.31"
+winit = "0.28"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+env_logger = "0.11"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

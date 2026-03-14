@@ -1,0 +1,103 @@
+// 4Browser Configuration
+// This mirrors Google Chrome's feature set
+
+{
+  "browser": {
+    "name": "4Browser",
+    "version": "1.0.0",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) 4Browser/1.0 Chrome/120.0",
+    "chromiumVersion": "120.0"
+  },
+
+  "features": {
+    "sync": {
+      "enabled": true,
+      "syncBookmarks": true,
+      "syncPasswords": true,
+      "syncTabs": true,
+      "syncSettings": true
+    },
+
+    "security": {
+      "enableSSL": true,
+      "enableSandbox": true,
+      "enableSecureStorage": true,
+      "autoUpdateEnabled": true,
+      "malwareProtection": true
+    },
+
+    "performance": {
+      "enableCaching": true,
+      "enableCompressionProxy": false,
+      "enablePreRendering": true,
+      "enableMemorySaver": true,
+      "enableBatteryOptimizer": true
+    },
+
+    "privacy": {
+      "enableDNSOverHttps": true,
+      "enableThirdPartyCookieBlocking": true,
+      "enableTrackingPrevention": true,
+      "enableSiteIsolation": true,
+      "enablePrivacySandbox": true
+    },
+
+    "extensions": {
+      "enabled": true,
+      "sandboxed": true,
+      "manifestV3": true
+    }
+  },
+
+  "ui": {
+    "theme": "light",
+    "showBookmarkBar": true,
+    "showStatusBar": true,
+    "tabGrouping": true,
+    "verticlTabs": false,
+    "compactMode": false,
+    "density": "default"
+  },
+
+  "search": {
+    "defaultEngine": "google",
+    "engines": [
+      {
+        "name": "Google",
+        "keyword": "google.com",
+        "url": "https://www.google.com/search?q={searchTerms}"
+      },
+      {
+        "name": "Bing",
+        "keyword": "bing.com",
+        "url": "https://www.bing.com/search?q={searchTerms}"
+      },
+      {
+        "name": "DuckDuckGo",
+        "keyword": "duckduckgo.com",
+        "url": "https://duckduckgo.com/?q={searchTerms}"
+      }
+    ]
+  },
+
+  "startup": {
+    "restorePreviousSessions": true,
+    "homepageTabs": ["about:home"],
+    "showWelcomePage": true
+  },
+
+  "downloads": {
+    "defaultLocation": "~/Downloads",
+    "askBeforeDownload": false,
+    "autoOpenSafeFiles": true
+  },
+
+  "privacy_settings": {
+    "clearBrowsingDataOnExit": false,
+    "incognitoMode": {
+      "enabled": true,
+      "neverSaveHistory": true,
+      "neverSaveCookies": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+# Ignore patterns for Git
+
+# Build artifacts
+build/
+dist/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Rust
+target/
+Cargo.lock
+*.rlib
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+dist/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Dependencies
+third_party/
+vendor/
+
+# User preferences
+.env
+.env.local
+config/user-prefs.json

@@ -1,0 +1,30 @@
+{
+  "name": "4browser",
+  "version": "1.0.0",
+  "description": "A modern Chromium-based browser built with C++, Rust, and JavaScript",
+  "main": "src/ui/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "cmake --build build",
+    "dev": "npm run build && ./build/4browser",
+    "preload": "webpack --config webpack.preload.js",
+    "ui": "vite",
+    "test": "jest",
+    "lint": "eslint src/ui --ext .js,.jsx,.ts,.tsx"
+  },
+  "keywords": ["browser", "chromium", "electron-like"],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.0",
+    "@types/node": "^20.10.0",
+    "electron-preload": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.0",
+    "webpack": "^5.89.0",
+    "jest": "^29.7.0",
+    "eslint": "^8.55.0"
+  }
+}
